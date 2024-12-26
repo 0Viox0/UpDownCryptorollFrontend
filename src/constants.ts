@@ -1,5 +1,5 @@
 export const currentHost = import.meta.env.DEV
-    ? 'http://localhost:5173' //'http://172.27.33.20:5173'
+    ? 'http://172.27.33.20:5173' //'http://localhost:5173'
     : import.meta.env.VITE_CURRENT_HOST;
 export const backendUrl = import.meta.env.DEV
     ? 'http://172.27.33.20:5089'

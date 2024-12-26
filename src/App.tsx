@@ -1,17 +1,17 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import GameManager from "./components/game/GameManager";
-import Layout from "./components/common/Layout";
-import Home from "./components/home/Home";
-import Profile from "./components/profile/Profile";
-import Rules from "./components/rules/Rules";
-import { useState } from "react";
-import { ApplicationContext, GameCoice } from "./context/ApplicationContext";
-import "./i18n";
-import { TonConnectUIProvider } from "@tonconnect/ui-react";
-import { manifestUrl } from "./constants";
-import TechnicalAnalysisGraph from "./components/common/TechnicalAnalysisGraph";
-import { CheckReferralLinkOnLogin } from "./features/referralLink";
-import QuizPage from "./components/QuizPage";
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import GameManager from './components/game/GameManager';
+import Layout from './components/common/Layout';
+import Home from './components/home/Home';
+import Profile from './components/profile/Profile';
+import Rules from './components/rules/Rules';
+import { useState } from 'react';
+import { ApplicationContext, GameCoice } from './context/ApplicationContext';
+import './i18n';
+import { TonConnectUIProvider } from '@tonconnect/ui-react';
+import { manifestUrl } from './constants';
+import TechnicalAnalysisGraph from './components/common/TechnicalAnalysisGraph';
+import { CheckReferralLinkOnLogin } from './features/referralLink';
+import QuizPage from './components/QuizPage';
 
 function App() {
     const [currentGame, setCurrentGame] = useState<GameCoice>(GameCoice.None);
@@ -28,6 +28,7 @@ function App() {
                 setDisplayLoginSignupPopup,
                 currentBalance,
                 setCurrentBalance,
+                isDarkMode: true,
             }}
         >
             <TonConnectUIProvider manifestUrl={manifestUrl}>

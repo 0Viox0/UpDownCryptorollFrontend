@@ -1,4 +1,4 @@
-import { createContext, Dispatch, SetStateAction } from "react";
+import { createContext, Dispatch, SetStateAction } from 'react';
 
 export const enum GameCoice {
     None,
@@ -14,8 +14,17 @@ export interface ApplicationContextInterface {
     setDisplayLoginSignupPopup: Dispatch<SetStateAction<boolean>>;
     currentBalance: number;
     setCurrentBalance: Dispatch<SetStateAction<number>>;
+    isDarkMode: boolean;
 }
 
 export const ApplicationContext = createContext<
     ApplicationContextInterface | undefined
->(undefined);
+>({
+    currentGame: GameCoice.None,
+    setCurrentGame: () => {},
+    displayLoginSignupPopup: false,
+    setDisplayLoginSignupPopup: () => {},
+    currentBalance: 0,
+    setCurrentBalance: () => {},
+    isDarkMode: true,
+});
